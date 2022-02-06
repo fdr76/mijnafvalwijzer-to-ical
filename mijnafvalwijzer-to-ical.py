@@ -55,7 +55,7 @@ cal.add("url", url)
 
 alarm = Alarm()
 alarm.add("action", "DISPLAY")
-alarm.add("trigger", value=timedelta(-1))
+alarm.add("trigger", value="-PT5H")
 
 for item in aw.find_all("a", "wasteInfoIcon textDecorationNone"):
     # Get the waste type from the fragment in the anchors href
