@@ -55,7 +55,8 @@ cal.add("url", url)
 
 alarm = Alarm()
 alarm.add("action", "DISPLAY")
-alarm.add("trigger", value="-PT5H")
+# alarm.add("trigger", value=timedelta(-0))  --> was orginele script
+alarm.add("trigger", timedelta(hours=-6)) # --> melding om 18:00 dag voor ophaaldag
 
 for item in aw.find_all("a", "wasteInfoIcon textDecorationNone"):
     # Get the waste type from the fragment in the anchors href
